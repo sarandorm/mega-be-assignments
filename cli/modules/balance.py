@@ -1,7 +1,7 @@
 import click
 from web3.exceptions import ContractLogicError
 
-from func import contract_symbol, contract_target_balance, initiate_contact
+from utils import contract_symbol, contract_target_balance, initiate_contact
 
 
 
@@ -9,6 +9,7 @@ from func import contract_symbol, contract_target_balance, initiate_contact
 @click.argument('contract_address')
 @click.argument('target_address')
 def balanceOf(contract_address, target_address):
+    '''Get balance of the target address on the contract address'''
     try:
         contract = initiate_contact(contract_address)
         balance = contract_target_balance(contract,target_address)

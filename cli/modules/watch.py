@@ -1,11 +1,12 @@
 import click
 from web3.exceptions import ContractLogicError
 
-from func import convert_to_check_sum_address, create_filter
+from utils import convert_to_check_sum_address, create_filter
 
 @click.command(name='watch')
 @click.argument('contract_address')
 def watch(contract_address):
+    '''Subscribe to transaction and return etherscan link for that transaction'''
     try:
         filter = create_filter(convert_to_check_sum_address(contract_address))
         while True:

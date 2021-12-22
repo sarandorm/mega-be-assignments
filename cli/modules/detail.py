@@ -1,12 +1,13 @@
 import click
 from web3.exceptions import ContractLogicError
 from requests.exceptions import HTTPError
-from func import convert_to_check_sum_address, initiate_contact,contract_decimals,contract_name,contract_symbol
+from utils import convert_to_check_sum_address, initiate_contact,contract_decimals,contract_name,contract_symbol
 
 
 @click.command(name='detail')
 @click.argument('contract_address')
 def detail(contract_address):
+    '''Get contract address symbol, name and decimals'''
     try:
         contract = initiate_contact(convert_to_check_sum_address(contract_address))
         click.echo(f'Contract Symbol : {contract_symbol(contract)}')
