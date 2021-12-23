@@ -9,4 +9,7 @@ def solve(wordList,target):
                 return (i,target[len(i):])
 
 
+wordlist = input("Enter list of word :").strip().split(',')
+target = input("Enter target word:").strip()
 
+print(solve(wordList=wordlist,target=target))
