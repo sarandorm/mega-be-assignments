@@ -1,4 +1,4 @@
-Setting up credentials
+## Setting up credentials
 
 You need to setup environment files (.env) as in the template_env
 ```
@@ -9,6 +9,8 @@ INFURA_URL=
 You can get the API key from etherscan and ethplorer via their API pages
 
 Get the Infura url from Infura dashboard
+
+## Command
 
 Here are all commands of this program
 
@@ -26,7 +28,8 @@ Commands:
   watch      Subscribe to transaction and return etherscan link for that...
 ```
 
-Example 
+## Example 
 
 ```
 cli.py detail 0xB8c77482e45F1F44dE1745F52C74426C631bDD52
+```
