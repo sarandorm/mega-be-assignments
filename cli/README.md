@@ -1,3 +1,4 @@
+# CLI part
 ## Setting up credentials
 
 You need to setup environment files (.env) as in the template_env
