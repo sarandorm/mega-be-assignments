@@ -1,1 +1,3 @@
 cli/.env
+cli/latest_transaction.txt
+cli/top_holder.txt
